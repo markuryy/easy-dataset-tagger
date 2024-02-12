@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Image Dataset Tagging Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app-container">
+    <div id="sidebar">
+        <div id="sidebar-top">
+            <button id="import-images">Import Images</button>
+            <input type="file" id="image-input" multiple hidden>
+            <button id="import-tags">Import Tags</button>
+            <input type="file" id="tags-input" hidden>
+        </div>
+        <div id="image-previews-container">
+            <div id="image-previews"></div>
+        </div>
+    </div>          
+
+    <div class="main-content"> <!-- Main content area for vertical stacking -->
+        <div id="image-display-area">
+            <button id="prev-image">&#8592;</button>
+            <div id="image-container">
+                <img id="current-image" src="" alt="Current Image" />
+            </div>
+            <button id="next-image">&#8594;</button>
+        </div>
+
+        <textarea id="image-caption" placeholder="Enter image caption here..."></textarea>
+        <div id="tag-buttons"></div>
+        <button id="save-caption">Save Caption</button>
+        <button id="export-data">Export Data</button> <!-- Assuming this button is added -->
+        <button id="clear-all">Clear All</button> <!-- Assuming this button is added -->
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
