@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const fileName = `image_${index + 1}${file.name.substring(file.name.lastIndexOf('.'))}`;
             zip.file(fileName, file);
             const captionText = captions[`image_${index + 1}`] || '';
-            zip.file(`caption_${index + 1}.txt`, captionText);
+            zip.file(`image_${index + 1}.txt`, captionText);
         });
 
         zip.generateAsync({type:"blob"}).then(function(content) {
